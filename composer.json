@@ -1,7 +1,7 @@
 {
     "name": "zdenekgebauer/cnb-client",
     "license": "wtfpl",
-    "description": "REST API client for ČNB API",
+    "description": "Client for retrieving exchange rates from API www.cnb.cz",
     "type": "library",
     "keywords": [
         "ČNB",
@@ -36,7 +36,6 @@
     },
     "require-dev": {
         "codeception/codeception": "^4.2",
-        "codeception/module-asserts": "^2.0",
-        "codeception/module-phpbrowser": "^1.0"
+        "codeception/module-asserts": "^2.0"
     }
 }
