@@ -1,0 +1,12 @@
+# generally ignored files
+*.bak
+*.log
+
+/.idea/
+# local build settings
+/build/reports/
+
+/tests/*.suite.yml
+/vendor/
+/.lando.local.yml
+/composer.lock

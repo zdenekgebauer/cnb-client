@@ -1,0 +1,14 @@
+build export-ignore
+tests export-ignore
+README.md export-ignore
+.editorconfig export-ignore
+.gitattributes export-ignore
+.github export-ignore
+.gitignore export-ignore
+.lando.yml export-ignore
+codeception*.yml export-ignore
+
+*.php text eol=lf
+
+*.php diff=php
+*.phar -diff

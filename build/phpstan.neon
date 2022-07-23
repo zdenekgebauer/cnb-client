@@ -1,0 +1,9 @@
+parameters:
+    paths:
+        - ../src/
+    level: max
+    bootstrapFiles:
+        - ../vendor/autoload.php
+    excludePaths:
+        - ../vendor/
+    ignoreErrors:

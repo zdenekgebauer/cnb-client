@@ -1,0 +1,42 @@
+{
+    "name": "zdenekgebauer/cnb-client",
+    "license": "wtfpl",
+    "description": "REST API client for ČNB API",
+    "type": "library",
+    "keywords": [
+        "ČNB",
+        "php",
+        "client",
+        "currency",
+        "exchange rate"
+    ],
+    "authors": [
+        {
+            "name": "Zdenek Gebauer",
+            "email": "zdenek.gebauer@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "platform": {
+            "php": "8.0"
+        },
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZdenekGebauer\\CnbClient\\": "src/"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.2",
+        "codeception/module-asserts": "^2.0",
+        "codeception/module-phpbrowser": "^1.0"
+    }
+}

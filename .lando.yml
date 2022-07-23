@@ -1,0 +1,35 @@
+name: cnb
+services:
+    appserver:
+        type: php:8.0
+        via: cli
+        scanner: false
+        xdebug: coverage
+tooling:
+    php:
+        service: appserver
+    composer:
+        service: appserver
+    phpcs:
+        service: appserver
+        description: check coding standards (PHP CodeSniffer)
+        cmd: php /app/build/phpcs.phar --standard=PSR12 --report-file=build/reports/checkstyle.txt src
+    phpstan:
+        service: appserver
+        description: static analysis (PHPStan)
+        cmd:
+            - php /app/build/phpstan.phar clear-result-cache
+            - php /app/build/phpstan.phar analyze -c build/phpstan.neon > build/reports/phpstan.txt
+    codeception:
+        service: appserver
+        description: Run codeception
+        cmd: /app/vendor/bin/codecept
+    tests:
+        service: appserver
+        description: all tests (Codeception)
+        cmd: /app/vendor/bin/codecept run --html report-tests.html --env lando
+    coverage:
+        service: appserver
+        description: code coverage (Codeception)
+        cmd: /app/vendor/bin/codecept run --html report-coverage.html --coverage-html --env lando
+
